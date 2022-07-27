@@ -5,7 +5,6 @@ from torch import nn as nn
 
 
 class ToyDiscriminator(nn.Module):
-
     def __init__(self):
         super(ToyDiscriminator, self).__init__()
         self.conv0 = nn.Conv2d(3, 4, 3, 1, 1, bias=True)
@@ -82,7 +81,7 @@ def main():
         print(torch.sum(torch.abs(k1.grad - k2.grad)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 r"""Output:
 conv0.weight torch.Size([4, 3, 3, 3])
